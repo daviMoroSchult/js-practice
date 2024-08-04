@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM projects</title>
+</head>
+<body>
+
+  <p>
+    youtube subscribe button
+  </p>
+
+  <button class="js-button" onclick="subscribe();">
+    Subscribe
+  </button>
+
+  <p>Amazon shipping calculator</p>
+
+  <p>Costs more than $40 dollars = FREE shipping</p>
+
+  <p>Costs less than $40 dollars = $10 shipping</p>
+
+  <input onkeydown="handleCostKeyDown(event);" placeholder="Cost of order" type="text" class="js-input">
+
+  <button onclick="calculateShipping();">Calculate</button>
+
+  <p class="js-output"></p>
+
+  <input onkeyup="handleSubmitOnKeyUp(event);" onkeydown="handleSubmitKeyDown(event);" class="js-input-name" placeholder="Name" type="text">
+  <button  class="js-submit" onclick="submit();">Submit</button>
+  <p class="js-output-name"></p>
+  <p class="js-output-up"></p>
+
+  <script>
+
+    // window.document
+    // window.console
+
+    // String(25)
+
+    // Number('25')
+
+
+
+    function subscribe() {
+      let text = document.body.querySelector('.js-button');
+
+      if (text.innerText === 'Subscribe') {
+        text.innerText = 'Unsubscribe';
+      } else {
+        text.innerText = 'Subscribe';
+      }
+    }
+
+    function calculateShipping() {
+      let input = document.body.querySelector('.js-input');
+      let output = document.body.querySelector('.js-output');
+      let shipping = 10
+
+      if (input.value >= 40) {
+        output.innerHTML = `Total cost: $${input.value}`;
+      } else {
+        output.innerHTML = `Total cost: $${(Number(input.value) + 10).toFixed(2)}`;
+      }
+    }
+
+    function handleCostKeyDown(event) {
+      if (event.key === 'Enter') {
+        calculateShipping();
+      }
+    }
+
+    function submit() {
+      const nameInput = document.body.querySelector('.js-input-name');
+      const output = document.body.querySelector('.js-output-name');
+      output.innerHTML = `Hello ${nameInput.value}!`;
+    }
+
+    function handleSubmitKeyDown(event,) {
+      if (event.key === 'Enter') {
+        submit();
+      }
+    }
+
+    function handleSubmitOnKeyUp(event) {
+      const nameKeyUp = document.body.querySelector('.js-output-up');
+      nameKeyUp.innerHTML += event.key;
+    }
+
+  </script>
+</body>
+</html>

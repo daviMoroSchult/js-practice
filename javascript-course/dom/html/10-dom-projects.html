@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM projects</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+
+  <div>
+    <p>
+      Youtube subscribe button
+    </p>
+  
+    <button class="js-button subscribe" onclick="subscribe();">
+      Subscribe
+    </button>
+  </div>
+  
+
+  <div>
+    <p>Amazon shipping calculator</p>
+
+    <p>Costs more than $40 dollars = FREE shipping</p>
+  
+    <p>Costs less than $40 dollars = $10 shipping</p>
+  
+    <input onkeydown="handleCostKeyDown(event);" placeholder="Cost of order" type="text" class="js-input cost-input">
+  
+    <button class="calculate" onclick="calculateShipping();">Calculate</button>
+  
+    <p class="js-output"></p>
+  
+   
+  </div>
+    
+  <div>
+    <input onkeyup="handleSubmitOnKeyUp(event);" onkeydown="handleSubmitKeyDown(event);" class="js-input-name" placeholder="Name" type="text">
+    <button  class="js-submit" onclick="submit();">Submit</button>
+    <p class="js-output-name"></p>
+    <p class="js-output-up"></p>
+  </div>
+  
+
+  <script src="../js/index.js"></script>
+</body>
+</html>

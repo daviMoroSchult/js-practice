@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Functions</title>
+</head>
+<body>
+
+
+  <script>
+    // function function1 () {
+    //   console.log('hello');
+    //   console.log(2 + 2);
+    // }
+
+    // function1();
+    
+    // function greet(name) {
+    //   let greeting = name && name != '' ? `hello ${name}` : 'hi there';
+    //   console.log(greeting);
+    // }
+    // greet('davi');
+    // greet('');
+
+    // function convertToFahrenheit(celsius) {
+    //   console.log(celsius * 9 / 5 + 32);
+    // }
+
+    // convertToFahrenheit(25);
+
+    // function convertToCelsius(fahrenheit) {
+    //   console.log((fahrenheit - 32) * 5 / 9);
+    // }
+
+    // convertToCelsius(86);
+
+    // function convertDegreeUnit(degree, unit) {
+    //   const medida = unit === 'C' ? 1 : 0
+    //   medida == true ? console.log(Math.round(degree * 9 / 5 + 32)) : console.log(Math.round((degree - 32) * 5 / 9))
+    // }
+
+    // convertDegreeUnit(10, 'F');
+    
+
+    function convertLength(from, to, length) {
+      const unitTo = to == 'Km' ? 'Km' : to == 'Mi' ? 'Mi' : to == 'Ft' ? 'Ft' : `${to}`
+      const unitFrom = from == 'Km' ? 'Km' : from == 'Mi' ? 'Mi' : to == 'Ft' ? 'Ft' : `${from}`
+      if (unitTo === unitFrom) {
+
+        console.log('Vai se foder'); 
+
+      } else if (unitFrom === 'Km' && unitTo === 'Mi') {
+
+        console.log(length * 1.6);
+
+      } else if (unitFrom === 'Km' && unitTo === 'Ft') {
+
+        console.log(length * 3280);
+        
+      } else if (unitFrom === 'Mi' && unitTo === 'Km') {
+
+        console.log(length * 0.6);
+
+      } else if (unitFrom === 'Mi' && unitTo === 'Ft') {
+
+        console.log(length * 5280);
+        
+      } else if (unitFrom === 'Ft' && unitTo === 'Km') {
+
+        console.log(length / 3280);
+        
+      } else if (unitFrom === 'Ft' && unitTo === 'Mi') {
+
+        console.log(length / 5280);
+        
+      } else {
+
+        console.log(`ERRO: Unidade de medida invalida '${unitFrom}' ou '${unitTo}', tente 'Km', 'Mi' ou 'Ft'`);
+
+      }
+    }
+
+    convertLength('Km','Ft', 14);
+  </script>
+</body>
+</html>
