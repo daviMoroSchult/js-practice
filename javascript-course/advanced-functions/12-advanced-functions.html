@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Advanced Functions</title>
+</head>
+<body>
+
+  <button class="btn-start">Start</button>
+  <div>
+    <button class="btn-add-to-cart">Add to cart</button>
+    <p class="js-output">
+
+    </p>
+  </div>
+  <div>
+    <button class="btn-add-message">+1 message</button>
+    <button class="btn-remove-message">-1 message</button>
+  </div>
+
+  <input name="check" type="checkbox" class="js-checkbox">
+  <label for="check">Goleiro</label>
+  
+  <script>
+    
+    // // function greeting() {
+    // //   console.log('hello');
+    // // }
+
+    // // greeting();
+
+    // // const function1 = function () {
+    // //   console.log('hello2');
+    // // };
+
+    // // console.log(function1);
+    // // console.log(typeof function1);
+
+    // // // runs the function
+
+    // // function1();
+
+    // // const object1 = {
+    // //   num:2,
+    // //   func: function () {
+    // //     console.log(object1.num);
+    // //   }
+    // // }
+
+    // // object1.func()
+
+
+    // // function display(param) {
+    // //   console.log(param)
+    // // }
+
+    // // display(2);
+
+    // // function run(param1) {
+    // //   param1();
+    // // }
+
+    // // run(function (){
+    // //   console.log('hello');
+    // // })     
+
+    //       //Asyncrhonous code
+
+    //     // runs the function after a period of time in miliseconds(1 second = 1000 miliseconds)
+
+    // setTimeout(function () { 
+    //   console.log('timeout')
+    // }, 3000); 
+
+    // console.log('next line')
+
+    //   // runs the function after a period of time repeatedly(it does not stop running)
+
+    // setInterval(function () {
+    //   console.log('interval')
+    // }, 4000);
+
+    // console.log('next line2')
+
+    // ['make dinner',
+    //   'wash dishes',
+    //   'mow the lawn'
+    // ].forEach((value,index) => {
+    //   if (value === 'mow the lawn') {
+    //     return;
+    //   } else {
+    //     console.log(index)
+    //     console.log(value)
+    //   }
+      
+
+    // })
+
+    const add = function () {
+      console.log(2+3);
+    };
+
+    add();
+    add();
+
+    function runTwice(func) {
+      func();
+      func();
+    }
+
+    runTwice(function () {
+      console.log('hello');
+    });
+
+    const btnStart = document.querySelector('.btn-start');
+
+    btnStart.addEventListener('click', function () {
+      
+      setTimeout(function () {
+        btnStart.innerHTML = 'Finished';
+      }, 1000);
+      btnStart.innerHTML = 'Loading...';
+    });
+
+
+    const btnAddToCart = document.querySelector('.btn-add-to-cart');
+    const output = document.querySelector('.js-output');
+    let isMessageOn = false
+
+
+
+    btnAddToCart.addEventListener('click',  () => {
+    if (!isMessageOn) {
+      output.innerHTML = 'Added to cart';
+      
+      isMessageOn = true;
+
+      timeOutID = setTimeout(function () {
+        output.innerHTML = '';
+        isMessageOn = false;
+      },2000)
+
+    } else {
+
+      clearTimeout(timeOutID);
+
+      setTimeout(function () {
+        output.innerHTML = '';
+        isMessageOn = false;
+      },2000)
+    }
+      
+    });
+
+    function changeTitle() {
+      setInterval(function () {
+        document.title = 'Advanced functions';
+      },2001)
+      
+      setInterval(function () {
+      document.title = '(2) new messages';
+    }, 1000);
+    }
+
+    // changeTitle();
+
+    function chooseTitle() {
+
+      const btnAddMessage = document.querySelector('.btn-add-message');
+      const btnRemoveMessage = document.querySelector('.btn-remove-message');
+      let messages = 0;
+
+      btnAddMessage.addEventListener('click', () => {
+        messages++;
+      });
+
+      btnRemoveMessage.addEventListener('click', () => {
+        messages--;
+        if (messages < 0) {
+          document.title = 'Advanced functions';
+          messages = 0;
+        }
+      });
+
+      setInterval(function () {
+        document.title = 'Advanced functions';
+      },2001)
+      
+      setInterval(function () {
+      document.title = `(${messages}) new messages`;
+    }, 1000);
+    }
+
+  chooseTitle();
+    
+
+  </script>
+</body>
+</html>

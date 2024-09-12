@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>A&L exercises</title>
+</head>
+<body>
+
+
+  <script>
+    // const nums = ['10',20,30]
+
+    // console.log(nums)
+
+    // nums[2] = '99'
+
+    // console.log(nums[2])
+
+    // function getLast() {
+    //   console.log(nums[nums.length - 1])
+    // }
+
+    // getLast()
+
+    // function swapValue() {
+    //   const last = nums[nums.length - 1]
+    //   const first = nums[0]
+
+    //   nums[0] = last
+    //   nums[nums.length - 1] = first
+
+    //   console.log(nums)
+    // }
+
+    // swapValue()
+
+    // for(let i = 0; i <= 10; i+=2) {
+    //   console.log(i)
+    // }
+
+    // for(let j = 5; j !== 0; j--) {
+    //   console.log(j)
+    // }
+
+    // let i = 0
+
+    // while (i <= 10) {
+    //   console.log(i)
+    //   i+=2
+    // }
+
+    // let j = 5
+
+    // while(j !== 0) {
+    //   console.log(j)
+    //   j--
+    // }
+
+  //   let array = [1, 2, 3, 4]
+
+  //   console.log(array[1])
+
+  //   function addOne() {
+  //     let nums = [];
+  //     for (let i = 0; i < array.length; i++) {
+  //       nums.push(array[i] + 1);
+  //     }
+  //     console.log(nums)
+  //   }
+
+  //   addOne();
+
+  //   function addNum() {
+  //     let nums = [];
+  //     for (let i = 0; i < myArray.length; i++) {
+  //       nums.push(myArray[i] + numb);
+  //     }
+  //     console.log(nums)
+  //   }
+
+  //   let myArray = [-19,89,-56,-665]
+
+  //   const numb = 5
+
+  //   addNum();
+
+  //   function addArray() {
+  //     let nums = [];
+  //     for (let i = 0; i < myArray.length || i < array.length; i++) {
+  //       nums.push(array[i] + myArray[i])
+  //     }
+  //     console.log(nums)
+  //   }
+
+  //   addArray();
+
+  //   function countPositive() {
+
+  //     let nums = [];
+  //     for(let i = 0; i < myArray.length; i++) {
+  //       if (myArray[i] > 0) {
+  //         nums.push(myArray[i])
+  //       }
+  //     }
+  //     console.log(nums.length)
+  //   }
+
+  //   countPositive();
+
+  // const numbers = [1000,6,1009,-667,21,-668]
+
+  // function minMax(numbers) {
+
+  //   let values = {
+  //     min: '' ,
+  //     max: ''
+  //   }
+
+  //   const total = numbers
+
+  //   for(let i = 0; i < total.length; i++ ) {
+
+  //     if (total[i] < values.min) {
+  //       values.min = total[i]
+  //     } else if (total[i] > values.max) {
+  //       values.max = total[i]
+  //     }
+  //   }
+
+  //   console.log(`min:${values.min}, max:${values.max}.`)
+  // }
+
+  // minMax(numbers)
+
+  const words = ['hi', 'hello','norway','oslo','norway','hello','hello','hello']
+
+  function countWords(words) {
+    let wordCount = {
+      
+    }
+
+    const wordList = words
+
+    for(let i = 0; i < wordList.length; i++ ) {
+
+      let currentWord = wordList[i]
+
+      if(wordCount[currentWord] >= 1 ) {
+
+        wordCount[currentWord]++
+
+      } else {
+
+        wordCount[currentWord] = 1
+      }
+    }
+
+    console.log(wordCount)
+  }
+   
+
+  countWords(words);
+
+
+  // const strings = ['hello','fun','soccer','study','Search','search']
+
+  // function searchWord() {
+
+  //   let truth = 0
+
+  //   for (let i = 1; i <= strings.length; i++) {
+  //     if (strings[i] == 'search' || strings[i] == 'Search') {
+  //       truth = i
+  //       break;
+  //     } else {
+  //       truth--
+  //     }
+  //   }
+
+  //   if (truth < 0) {
+  //     console.log(-1)
+  //   } else {
+  //     console.log(truth)
+  //   }
+
+  // }
+
+  // searchWord(strings)
+
+  // let manyWords = ['hello','fun','soccer','study','Search','search']
+
+  // function findIndex(manyWords,search) {
+
+  //   const array = manyWords
+  //   const word =  search
+
+  //   let truth = 0
+
+  //   for (let i = 0; i <= array.length; i++) {
+  //     if (array[i] == word) {
+  //       truth = i
+  //       break;
+  //     } else {
+  //       truth--
+  //     }
+  //   }
+
+  //   if (truth < 0) {
+  //     console.log(-1)
+  //   } else {
+  //     console.log(truth)
+  //   }
+  // }
+
+
+  // findIndex(manyWords,'soccer')
+
+  // let variousFoods = ['apple','banana','carrot','donut','eggs','Egg','Egg','egg','eggs','Eggs','Egg']
+
+  // function removeWord(variousFoods, word) {
+  //   const array = variousFoods
+  //   const value = word
+
+  //   let count = 0
+
+  //   for (let i = 0; i < array.length; i++) {
+  //     if (array[i] !== value ) {
+  //       console.log(array[i])
+  //     } else {
+  //       count++
+  //       if (count == 3) {
+  //         console.log(array[i])
+  //       }
+  //     }
+  //   }
+
+  // }
+  
+  // removeWord(variousFoods,'Egg');
+
+ // let variousFoods = ['apple','banana','carrot','donut','eggs','Egg','Egg','egg','eggs','Eggs','Egg']
+
+//   function removeLastTwoWords(variousFoods, word) {
+//  const basket = variousFoods.slice().reverse(); // Reverse the array copy
+//  let result = [];
+//  let count = 0;
+
+//   for (let i = 0; i < basket.length; i++) {
+//    if (basket[i] !== word) {
+//      result.push(basket[i]);
+//    } else {
+//      count++;
+//      if (count == 3) {
+//        result.push(basket[i]); // Include the third instance only
+//      }
+//    }
+//  }
+
+//   console.log(result.reverse()); // Reverse again to restore original order
+// }
+
+// removeLastTwoWords(variousFoods, 'Egg');
+
+
+// const nums = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10,11,12,13,14,15,16,17,18,19,20];
+
+// function fizzBuzz(nums) {
+
+//   const numbers = nums
+
+//   for (let i = 0; i < numbers.length;i++) {
+
+//     if ( numbers[i] % 3 === 0 && numbers[i] % 5 === 0) {
+//       console.log('FizzBuzz') 
+//     }
+//     else if (numbers[i] % 5 ===0) {
+//       console.log('Buzz')
+//     } else if (numbers[i] % 3 === 0) {
+//       console.log('Fizz')
+//     } else {
+//       console.log(numbers[i])
+//     }
+//   }
+
+// }
+
+
+// fizzBuzz(nums);
+
+
+const wordys = ['apple','banana','carrot','donut','eggs','soda','juice','coconut','apple','banana','carrot']
+
+function removeDuplicates(wordys) {
+
+  const array = wordys;
+  const newArray = [];
+
+  for (let i = 0; i < array.length; i++) { 
+
+    const currentWord = array[i];
+
+    if (!newArray.includes(currentWord) === true) {
+      newArray.push(currentWord)
+    }
+  }
+  console.log(newArray)
+}
+
+removeDuplicates(wordys)
+
+</script>
+</body>
+</html>
