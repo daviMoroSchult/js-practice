@@ -1,0 +1,41 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.grid {
+  font-size: 1rem;
+  display: grid;
+  grid-template-columns:200px 150px 100px;
+  column-gap: 1em;
+  row-gap: 0.5em;
+  margin: 0.5em 0;
+}
+
+.name-input, .date-input {
+  font-size: 1rem;
+  padding: 0.45em 0.75em;
+}
+
+.add-btn {
+  background-color: green;
+  color: white;
+  cursor: pointer;
+  border: none;
+}
+
+.delete-btn {
+  background-color: darkred;
+  color: white;
+  cursor: pointer;
+  border: none;
+  padding: 0.45em 0.75em;
+}
+
+.add-btn:hover, .delete-btn:hover {
+  opacity: 0.9;
+}
+
+.add-btn:active , .delete-btn:active {
+opacity: 0.7;
+}
+

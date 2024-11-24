@@ -1,0 +1,40 @@
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: black;
+}
+
+p {
+  font-size: 40px;
+  color: white;
+  height: 40px;
+}
+
+div {
+  display: block;
+  margin: 10px  ;
+}
+
+div div {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  color: white;
+  background-color: rgb(68, 68, 68);
+  border: 1px solid rgb(68, 68, 68);
+  font-size: 17px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+  width: 18px;
+  height: 18px;
+  padding: 28px;
+  border-radius: 100%;
+}
+
+div div .operator {
+  background-color: orange;
+  border: 1px solid  orange;
+}

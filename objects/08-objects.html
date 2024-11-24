@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Objects</title>
+</head>
+<body>
+
+
+  <script>
+    // const product = {
+    //   name: 'socks',
+    //   price: '1090'
+    // };
+    // console.log(product);
+    // console.log(product.name);
+    // console.log(product.price);
+    // console.log(typeof product);
+
+    // product.name = 'cotton sock';
+    // console.log(product);
+
+
+
+    // const product2 = {
+    //   name: 'shirt',
+    //   price: '1990',
+    //   rating: {
+    //     stars: 4.5,
+    //     count: 87
+    //   }
+    // }
+
+    // console.log(product2.name);
+
+    // const jsonString = JSON.stringify(product2);
+    // console.log(JSON.parse(jsonString));
+
+    // const basketball = {
+    //   name: 'basketball',
+    //   price: 1990,
+      
+    // }
+
+    // console.log(basketball)
+    
+    // basketball.price += 500;
+    // console.log(basketball)
+
+    // basketball['delivery-time'] = '3 days';
+    // console.log(basketball);
+
+    const product1 = {
+      name: 'shirt',
+      price: 1090
+    }
+    
+    const product2 = {
+      name: 'socks',
+      price: 799
+    }
+
+    /// Compares the prices of two products and logs a message indicating which one is more expensive.
+    ///
+    /// # Parameters
+    ///
+    /// - `product1`: The first product to compare.
+    /// - `product2`: The second product to compare.
+    ///
+    /// # Examples
+    ///
+    /// ```
+    /// const product1 = { name: 'shirt', price: 1090 };
+    /// const product2 = { name: 'socks', price: 799 };
+    /// comparePrice(product1, product2); // logs: "shirt is more expensive than socks"
+    /// ```
+    function comparePrice(product1, product2) {
+      if (product1.price > product2.price) {
+        console.log(`'${product2.name}' is cheaper than '${product1.name}'`);
+      } else if (product1.price < product2.price) {
+        console.log(`'${product1.name} is cheaper than '${product2.name}'`);
+      } else {
+        console.log(`'${product1.name}' and '${product2.name} have the same price`);
+      }
+    }
+
+    comparePrice(product1, product2);
+
+    function isSameProduct(product1, product2) {
+      if (product1.name === product2.name && product1.price === product2.price) {
+        console.log(`'${product1.name}' and '${product2.name}' are the same product.`);
+      } else {
+        console.log(`'${product1.name}' and '${product2.name}' are different products.`);
+      }
+    }
+
+    isSameProduct(product1, product1);
+
+    let rexy = 'Goodbye';
+    let rtx = rexy.toLowerCase();
+    console.log(rtx.repeat(10)); 
+  </script>
+</body>
+</html>

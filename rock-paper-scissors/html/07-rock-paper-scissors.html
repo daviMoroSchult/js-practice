@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Rock paper scissors</title>
+</head>
+<body>
+
+  <p>Rock paper scissors</p>
+
+  <button onclick="
+  const randomNumber1 = Math.random();
+
+  if (randomNumber1 <= 1/3) {
+    alert('You chose rock. The computer chose rock. You tied');
+  } else if (randomNumber1 > 1/3 && randomNumber1 <= 2/3) {
+    alert('You chose rock. The computer chose paper. You lose');
+  } else {
+    alert('You chose rock. The computer chose scissors. You win');
+  }
+  ">
+    Rock
+  </button>
+
+
+  <button onclick="
+  const randomNumber2 = Math.random();
+
+  if (randomNumber2 <= 1/3) {
+    alert('You chose paper. The computer chose rock. You win');
+  } else if (randomNumber2 > 1/3 && randomNumber2 <= 2/3) {
+    alert('You chose paper. The computer chose paper. You tied');
+  } else {
+    alert('You chose paper. The computer chose scissors. You lose');
+  }">
+    Paper
+  </button>
+
+
+  <button onclick="
+  const randomNumber3 = Math.random();
+
+  if (randomNumber3 <= 1/3) {
+    alert('You chose scissors. The computer chose rock. You lose');
+  } else if (randomNumber3 > 1/3 && randomNumber3 <= 2/3) {
+    alert('You chose scissors. The computer chose paper. You win');
+  } else {
+    alert('You chose scissors. The computer chose scissors. You tied');
+  }
+    ">
+    Scissors
+  </button>
+
+  <p><a href="">Cick here</a> to see the final version of the project.</p>
+
+  <script>
+
+  </script>
+</body>
+</html>
